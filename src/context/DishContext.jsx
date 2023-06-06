@@ -9,7 +9,7 @@ const DishContext = (props) => {
   const getData = async () => {
     let arr = [];
     let popularArr = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
       const res = await fetch(
         "https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io/dishes/v1/"
       );

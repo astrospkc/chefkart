@@ -2,10 +2,19 @@ import React from "react";
 
 const PopularDishesCard = (props) => {
   const { name, image } = props;
+
   return (
-    <div className="rounded-full mr-4">
-      <img src={image} alt="" className="rounded-full h-20 w-20" />
-      <h1>{name}</h1>
+    <div
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        borderRadius: "100%",
+        height: "90px",
+        width: "90px",
+      }}
+    >
+      {/* <img src={image} alt="" className="rounded-full h-20 w-20" /> */}
+      <h1 className="text-center">{name}</h1>
     </div>
   );
 };
