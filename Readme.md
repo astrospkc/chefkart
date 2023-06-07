@@ -7,11 +7,11 @@ Users should be able to:
 
 ### look of the website
 
-![](images/1.png)
+![](webimage/1.png)
 
 ## SignUp page
 
-![](images/2.png)
+![](webimage/2.png)
 
 ### Links
 
