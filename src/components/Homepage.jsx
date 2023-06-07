@@ -5,19 +5,27 @@ import { useContext } from "react";
 import { Items } from "../context/DishContext";
 
 import PopularDishesCard from "./PopularDishesCard";
+import Time from "./Time";
 
 const Homepage = () => {
   const { dishes, popularDishes } = useContext(Items);
   return (
     <>
       <div className="relative">
-        <div className=" fixed top-0 w-[100%] shadow-sm shadow-red-300 bg-white">
-          <Header />
+        <div className="fixed top-0 w-[100%] shadow-sm shadow-red-300 bg-white z-20 ">
+          <div className="">
+            <Header />
+          </div>
+          <div className="absolute top-[20%] left-[15%]">
+            <Time />
+          </div>
 
           {/* popular dishes */}
-          <div className="flex flex-col   ">
-            <div className="">Popular Dishes</div>
-            <div className="flex flex-row justify-evenly gap-4 mx-3">
+          <div className="flex flex-col mx-3    ">
+            <div className="text-xl md:text-2xl font-semibold">
+              Popular Dishes
+            </div>
+            <div className="flex flex-row justify-evenly gap-4 mx-3 my-2 overflow-x-scroll">
               {popularDishes &&
                 popularDishes.map((e, i) => {
                   const { name, image, id } = e;
@@ -32,12 +40,12 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col  m-4 md:m-1 sm:mt-[90%] mt-[70%] md:mt-[20%] ">
+        <div className="flex flex-col  m-4 md:m-1 sm:mt-[90%] mt-[70%] md:mt-[20%]    ">
           <div className="text-xl font-semibold md:text-2xl">
             Recommended Items
           </div>
           <div>
-            <div className="grid grid-cols-1 border-2 rounded-lg md:grid-cols-5">
+            <div className="grid grid-cols-1 border-2 rounded-lg md:grid-cols-5 ">
               {dishes &&
                 dishes.map((e, i) => {
                   const { name, rating, description, equipments, image, id } =

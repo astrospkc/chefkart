@@ -5,10 +5,10 @@ const ItemsCard = (props) => {
   const { name, rating, description, equipments, image, id } = props;
   return (
     <>
-      <div className=" mr-4 hover:shadow-lg md:shadow-red-400 hover:  ">
+      <div className=" mr-4 hover:shadow-lg md:shadow-red-400  ">
         <div className="flex flex-row-reverse md:flex-col my-3 ">
           {/* image div */}
-          <div className="w-[40%] md:w-fit ">
+          <div className="w-[40%] md:w-fit relative  ">
             <img
               src={image}
               alt=""

@@ -11,10 +11,11 @@ const PopularDishesCard = (props) => {
         borderRadius: "100%",
         height: "90px",
         width: "90px",
+        backdropFilter: blur(10),
       }}
     >
       {/* <img src={image} alt="" className="rounded-full h-20 w-20" /> */}
-      <h1 className="text-center">{name}</h1>
+      <h1 className="blurred text-center">{name}</h1>
     </div>
   );
 };
