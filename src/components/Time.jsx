@@ -29,7 +29,7 @@ const Time = () => {
 
   return (
     <>
-      <div className="bg-white shadow-sm shadow-gray-500 flex flex-row gap-3 p-3">
+      <div className="bg-white shadow-sm shadow-gray-500 flex flex-row gap-3 p-3 rounded-xl">
         <div>{date}</div>
         <div>{time}</div>
         <div>{wish}</div>

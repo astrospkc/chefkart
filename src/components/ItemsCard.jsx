@@ -14,9 +14,9 @@ const ItemsCard = (props) => {
               alt=""
               className="h-32 w-32 md:h-fit md:w-fit md:p-3 rounded-2xl"
             />
-            <div className="absolute top-[90%] left-[30%]">
-              <button className="bg-yellow-400 px-4 rounded-xl border-2 border-white">
-                add
+            <div className="absolute top-[90%]  md:top-[95%] left-[30%] md:left-[40%]">
+              <button className="bg-yellow-400 md:text-xl font-semibold px-4 rounded-xl border-2 border-white">
+                Add
               </button>
             </div>
           </div>

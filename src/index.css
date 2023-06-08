@@ -18,4 +18,18 @@
     justify-content: center;
     align-items: center;
   }
+
+  .container::-webkit-scrollbar {
+    height: 1px;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+  }
+
+  .container::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 10px;
+  }
 }

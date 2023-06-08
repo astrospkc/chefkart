@@ -9,6 +9,18 @@ import Time from "./Time";
 
 const Homepage = () => {
   const { dishes, popularDishes } = useContext(Items);
+
+  // scroll event
+  const handleScroll = (event) => {
+    const container = event.target;
+    const scrollAmount = event.deltaY;
+    container.scrollTo({
+      top: 0,
+      left: container.scrollLeft + scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className="relative">
@@ -21,17 +33,20 @@ const Homepage = () => {
           </div>
 
           {/* popular dishes */}
-          <div className="flex flex-col mx-3    ">
+          <div className="flex flex-col mx-3     ">
             <div className="text-xl md:text-2xl font-semibold">
               Popular Dishes
             </div>
-            <div className="flex flex-row justify-evenly gap-4 mx-3 my-2 overflow-x-scroll">
+            <div
+              className="container flex justify-evenly items-center gap-4 mx-3 my-2  flex-nowrap overflow-x-scroll min-w-full  "
+              onWheel={handleScroll}
+            >
               {popularDishes &&
                 popularDishes.map((e, i) => {
                   const { name, image, id } = e;
                   return (
                     <>
-                      <div key={i} className="">
+                      <div key={i} className="ml-1">
                         <PopularDishesCard name={name} image={image} />
                       </div>
                     </>
