@@ -30,7 +30,7 @@ const ItemsCard = (props) => {
             <div>
               {/* equipment */}
               <div className="flex flex-row">
-                <div className="text-xs mb-2 mr-2 flex flex-row gap-1">
+                <div className="text-xs mb-2 mr-2 flex flex-col gap-1">
                   {equipments &&
                     equipments.map((e, i) => {
                       return (
@@ -41,7 +41,7 @@ const ItemsCard = (props) => {
                     })}
                 </div>
                 <Link to="/ingredients">
-                  <div className="text-xs mb-2 hover:cursor-pointer font-bold">
+                  <div className="text-xs mb-2 hover:cursor-pointer font-bold bg-gray-300 rounded-full p-1 ">
                     Ingredients
                   </div>
                 </Link>
