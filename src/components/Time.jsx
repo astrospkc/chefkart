@@ -13,7 +13,7 @@ const Time = () => {
     };
   }, []);
 
-  const day = today.toLocaleDateString(locale, { weekday: "long" });
+  const day = today.toLocaleDateString(locale, { weekday: "short" });
   const date = `${day}, ${today.getDate()} ${today.toLocaleDateString(locale, {
     month: "long",
   })}\n\n`;
@@ -29,10 +29,10 @@ const Time = () => {
 
   return (
     <>
-      <div className="bg-white shadow-sm shadow-gray-500 flex flex-row gap-3 p-3 rounded-xl">
+      <div className="bg-white shadow-sm shadow-gray-500 flex flex-row gap-3 p-2 rounded-xl font-semibold">
         <div>{date}</div>
         <div>{time}</div>
-        <div>{wish}</div>
+        {/* <div>{wish}</div> */}
       </div>
     </>
   );

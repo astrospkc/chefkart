@@ -11,11 +11,14 @@ const PopularDishesCard = (props) => {
         borderRadius: "100%",
         height: "90px",
         width: "90px",
+        loading: "lazy",
       }}
       className=""
     >
       {/* <img src={image} alt="" className="rounded-full h-20 w-20" /> */}
-      <h1 className="blurred text-center">{name}</h1>
+      <div className="blurred h-[90px] w-[90px]">
+        <h1 className=" text-center">{name}</h1>
+      </div>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const Homepage = () => {
           <div className="">
             <Header />
           </div>
-          <div className="absolute top-[20%] left-[15%]">
+          <div className="absolute top-[20%] left-[30%]">
             <Time />
           </div>
 
